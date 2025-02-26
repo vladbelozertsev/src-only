@@ -4,11 +4,11 @@ Src-only is extension for vscode shows/hides unnecessary directories in your pro
 
 ## Usage
 
-After installation open project that contains "src" folder and press "ALT+S"
+After installation open project that contains "src" folder and press "ALT+S".
 
 ## Hotkeys
 
-By default "ALT+S", you can change the hotkeys: Code => Preferences => Keyboard Shortcuts => tap "src-only" to input
+By default "ALT+S", you can change the hotkeys: Code => Preferences => Keyboard Shortcuts => tap "src-only" to input.
 
 ## Custom folders
 
