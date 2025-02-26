@@ -25,5 +25,5 @@ The extension edit files.exclude when you press the hotkeys. If you have always 
 For example:
 
 ```json
- "src-only.exclude": ["vendor"] // always hide vendor folder even after src-only is toggled
+ "src-only.exclude": ["vendor"] // always hide vendor folder even after src-only inactive
 ```
