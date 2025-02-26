@@ -2,7 +2,13 @@
   "name": "src-only",
   "displayName": "src-only",
   "description": "show only src folder",
-  "version": "0.0.1",
+  "publisher": "vladbelozertsev",
+  "icon": "images/logo.png",
+  "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vladbelozertsev/src-only"
+  },
   "engines": {
     "vscode": "^1.97.0"
   },
