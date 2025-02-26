@@ -1,0 +1,64 @@
+{
+  "name": "src-only",
+  "displayName": "src-only",
+  "description": "show only src folder",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Show your custom files or folders",
+      "properties": {
+        "src-only.show": {
+          "type": "array",
+          "default": [
+            "src"
+          ],
+          "description": "Show current folders/files"
+        },
+        "src-only.exclude": {
+          "type": "array",
+          "default": [],
+          "description": "Optional basic files.exclude configuration"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "src-only.toggle",
+        "title": "Src/Root Folder Toggle Visibility"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "src-only.toggle",
+        "key": "alt+s"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.97.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "eslint": "^9.19.0",
+    "typescript": "^5.7.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
