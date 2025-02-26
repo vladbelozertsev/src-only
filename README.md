@@ -1,71 +1,29 @@
-# src-only README
+## About
 
-This is the README for your extension "src-only". After writing up a brief description, we recommend including the following sections.
+Src-only is extension for vscode shows/hides unnecessary directories in your project. By default, everything except the "src" folder is become hidden when you press the hotkeys. You can change this logic (add your additional dirs or remove default "src"), see below.
 
-## Features
+## Usage
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+After installation open project that contains "src" folder and press "ALT+S"
 
-For example if there is an image subfolder under your extension project workspace:
+## Hotkeys
 
-\!\[feature X\]\(images/feature-x.png\)
+By default "ALT+S", you can change the hotkeys: Code => Preferences => Keyboard Shortcuts => tap "src-only" to input
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Custom folders
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
+Open your .vscode/settings.json file and edit "src-only.show" value. Value is array of strings, that represents folder structrure of your project.
 For example:
 
-This extension contributes the following settings:
+```json
+  "src-only.show": ["src", "index.js"] // show only index.js and src folder
+```
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## VSCode files.exclude
 
-## Known Issues
+The extension edit files.exclude when you press the hotkeys. If you have always hidden folders in your project, add them to "src-only.exclude", and after switching your project will return to basic files.exclude setup.
+For example:
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+```json
+ "src-only.exclude": ["vendor"] // always hide vendor folder even after src-only is toggled
+```
