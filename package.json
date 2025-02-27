@@ -4,7 +4,7 @@
   "description": "Show only src folder",
   "publisher": "vladbelozertsev",
   "icon": "images/logo.png",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/vladbelozertsev/src-only"
