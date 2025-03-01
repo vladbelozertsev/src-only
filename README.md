@@ -1,6 +1,6 @@
 ## About
 
-Src-only is extension for vscode shows/hides unnecessary directories in your project. By default, everything except the `"src"` folder is become hidden when you press the hotkeys. You can change this logic (add your additional dirs or remove default `"src"`), see below.
+Src Only is extension for vscode shows/hides unnecessary directories in your project. By default, everything except the `"src"` folder is become hidden when you press the hotkeys. You can change this logic (add your additional dirs or remove default `"src"`), see below.
 
 ## Usage
 
